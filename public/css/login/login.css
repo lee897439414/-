@@ -1,0 +1,35 @@
+body,html,.register-box{
+	width: 100%;
+	height: 100%;
+}
+.register-box{
+	background: url(../../images/bg.jpg) no-repeat center;
+	 background-size: cover;
+	 padding-top: 100px;
+}
+.register{
+	width: 480px;
+	background-color: #fff;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 20px;
+}
+.title{
+	font-size: 24px;
+	color: #333;
+	text-align: center;
+}
+.itemName{
+	width: 60px;
+	line-height: 38px;
+}
+.inputItem{
+	width: 380px;
+}
+.getcode{
+	width: 160px;
+}
+.btnItem{
+	background: #eee;
+	margin-left: 10px;
+}

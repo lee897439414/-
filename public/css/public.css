@@ -1,0 +1,15 @@
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.flex{
+	display: flex;
+}
+.mt-10{
+	margin-top: 10px;
+}
+.clearfixb{
+	overflow: hidden;
+}
