@@ -17,34 +17,39 @@
 				</div>
 				<form>
 					<div class="form-group  mt-10 clearfixb">
-						<label for="exampleInputEmail1" class="fl itemName">邮箱</label>
+						<label for="email" class="fl itemName">邮箱</label>
 						<div class="fl inputItem">
-							<input type="email" class="form-control" id="exampleInputEmail1">
+							<input type="email" class="form-control" id="email">
+							<div class="error-msg">邮箱格式不正确</div>
 						</div>
 					</div>
 					<div class="form-group mt-10 clearfixb">
-						<label for="name" class="itemName fl">昵称</label>
+						<label for="nickName" class="itemName fl">昵称</label>
 						<div class="fl inputItem">
-							<input type="text" class="form-control" id="name">
+							<input type="text" class="form-control" id="nickName">
+							<div class="error-msg">昵称支持字母数字下划线组合</div>
 						</div>
 					</div>
 					<div class="form-group mt-10 clearfixb">
 						<label for="password" class="itemName fl">密码</label>
 						<div class="fl inputItem">
 							<input type="password" class="form-control" id="password">
+							<div class="error-msg">密码支持字母数字下划线组合6-16字符</div>
 						</div>
 					</div>
 					<div class="form-group mt-10 clearfixb">
-						<label for="password" class="itemName fl">验证码</label>
+						<label for="code" class="itemName fl">验证码</label>
 						<div class="fl inputItem">
 							<div class="getcode fl">
-								<input type="password" class="form-control" id="password">
+								<input type="password" class="form-control" id="code">
+								<div class="error-msg">验证码为6为数字</div>
 							</div>
 							<!-- <div class="btnItem btn" id="getCode">	获取验证码</div> -->
 							<button type="button" class="btnItem btn" id="getCode">获取验证码</button>
 						</div>
+						
 					</div>
-					<button type="submit" class="btn btn-primary btn-block">注册</button>
+					<button type="submit" id="register" class="btn btn-primary btn-block">注册</button>
 				</form>
 				<div class="clearfixb">
 					<span class="fr">已有账号登录</span>
@@ -52,6 +57,7 @@
 			</div>
 		</div>
 		<script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/js/validForm.js"></script>
 		<script src="/js/rigester.js"></script>
 	</body>
 </html>
