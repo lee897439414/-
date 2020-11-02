@@ -20,47 +20,35 @@ $('#getCode').on('click',function(){
 // 表单验证
 var validForm = new ValidForm()
 $('#email').on('change',function(){
-	var value = $(this).val()
-	if(!validForm.isEmail(value)){
-		$(this).next().show()
-		return
-	}else{
-		$(this).next().hide()
-	}
+	 valid.call(this, 'isEmail');
 })
 // 	验证昵称
 $('#nickName').on('change',function(){
-	var value = $(this).val()
-	if(!validForm.isNickname(value)){
-		$(this).next().show()
-		return
-	}else{
-		$(this).next().hide()
-	}
+	 valid.call(this, 'isNickname');
 })
 
 // 验证密码
 $('#password').on('change',function(){
-	var value = $(this).val()
-	if(!validForm.isPassword(value)){
-		$(this).next().show()
-		return
-	}else{
-		$(this).next().hide()
-	}
+	valid.call(this, 'isPassword')
 })
 
 // 验证验证码
 $('#code').on('change',function(){
-	var value = $(this).val()
-	console.log(value)
-	if(!validForm.isCode(value)){
-		$(this).next().show()
-		return
-	}else{
-		$(this).next().hide()
-	}
+	valid.call(this, 'isCode');
 })
+
+  //验证表单控件
+  function valid(fnName) {
+    let value = $(this).val();
+    console.log('value ==> ', value);
+
+    if (!validForm[fnName](value)) {
+      $(this).next().show().attr('name', 1);
+    } else {
+      $(this).next().hide().removeAttr('name');
+    }
+  }
+
 
 // 注册
 $('#register').on('click',function(){
@@ -76,6 +64,9 @@ $('#register').on('click',function(){
 	if(isEmpty){
        return
 	}
-
-	let isHasError = $(this)
+	console.log('isHasError ==> ', $('.error-msg'));
+	let isHasError = $('.error-msg[name=="1"]').length > 0
+	if(!isHasError){
+		
+	}
 })
